@@ -8,11 +8,20 @@
 
 Socket.IO is a library that enables real-time, bidirectional and event-based communication between the browser and the server. It consists of:
 
-> a Node.js server: Source | API
-> a Javascript client library for the browser (which can be also run from Node.js):
+> 1. a Node.js server.
+
+> 2. a Javascript client library for the browser (which can be also run from Node.js):
 
 > `socket.io` uses `websockets` behind the scene to make real time communications.
-> `websockets` is available in the window global object.
+> `websockets` is available in the window global object `(window.websocket)`.
+
+## A little note about Websocket
+
+> Websocket is a special communication "channel" between browsers (clients) and servers. Its an HTML5 protocol.
+
+> Websocket's connection is constant, in contrast to traditional HTTP requests, which are always initiated by the client, which means there's no way for a server to notify the client if there are updates (except for Server-side Events).
+
+> What happens in the case of webSocket is that a particular client (browser installed in a Node) broadcasts message to a server, the server then takes the message and broadcast to other connected clients or nodes, and as such a realtime communication is established.
 
 ## How it works
 
